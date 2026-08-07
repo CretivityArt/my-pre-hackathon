@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borcelle Digital Wallet</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!--
+        This is the entry point of the project.
+        It briefly shows a loading spinner, then sends the user to the
+        login page. If you later add real session checking, you can
+        change the redirect target here (e.g. straight to dashboard.html
+        if a valid session already exists).
+    -->
+    <div class="landing-page">
+        <div style="text-align:center;">
+            <div class="landing-spinner"></div>
+            <p>Loading Borcelle Digital Wallet...</p>
+        </div>
+    </div>
+
+    <script src="js/navigation.js"></script>
+    <script>
+        // Redirect to the login page shortly after the page loads.
+        setTimeout(goToLogin, 600);
+    </script>
+</body>
+</html>

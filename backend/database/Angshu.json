@@ -1,0 +1,29 @@
+{
+     "success": true,
+"user": {
+        "name": "Angshu",
+        "memberLevel": "Silver Member",
+        "avatarUrl": "assets/images/avatar.png"
+    },
+    "balance": {
+        "amount": "5.2564,50",
+        "cardNumberMasked": "123-456-7890",
+        "expiry": "April 2028"
+    },
+    "card": {
+        "holderName": "Olivia Wilson",
+        "cardNumberMasked": "123-456-7890",
+        "status": "Activated",
+        "tier": "Borcelle Silver Card",
+        "isPriorityCustomer": true
+    },
+    "transactions": [
+        { "purpose": "Fauget Cafe", "subtext": "Coffee Shop", "date": "2026-08-07", "time": "2m ago", "amount": "$500", "method": "QR Code", "status": "Done" },
+        { "purpose": "Claudia Store", "subtext": "Accessories", "date": "2026-08-07", "time": "5m ago", "amount": "$1.000", "method": "Transfer", "status": "Done" },
+        { "purpose": "Chidi Barber", "subtext": "Barber Shop", "date": "2026-08-07", "time": "1h ago", "amount": "$500", "method": "QR Code", "status": "Done" },
+        { "purpose": "Cahaya Dewi", "subtext": "Bank Account", "date": "2026-08-07", "time": "2h ago", "amount": "$1.000", "method": "Transfer", "status": "Pending" },
+        { "purpose": "Yael Amari", "subtext": "Bank Account", "date": "2026-08-07", "time": "09:00 AM", "amount": "$500", "method": "Transfer", "status": "Done" },
+        { "purpose": "Larana, Inc.", "subtext": "Hotel", "date": "2026-08-07", "time": "08:00 AM", "amount": "$1.000", "method": "QR Code", "status": "Done" }
+    ]
+
+}

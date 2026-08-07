@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome — Borcelle Digital Wallet</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="welcome-page">
+        <div class="welcome-box">
+            <img src="assets/images/logo.svg" alt="Borcelle logo">
+            <h1>You're logged in, Olivia!</h1>
+            <p>Your account is ready. Head over to your dashboard to check your balance, review recent transactions, and manage your card.</p>
+            <button class="btn btn-primary" id="continueBtn">Go to Dashboard</button>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/navigation.js"></script>
+    <script>
+        // Small page-specific wiring: the single button on this page
+        // just takes the user to the dashboard.
+        document.getElementById("continueBtn").addEventListener("click", goToDashboard);
+    </script>
+</body>
+</html>

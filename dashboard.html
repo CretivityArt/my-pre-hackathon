@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard — Borcelle Digital Wallet</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="app-shell">
+
+        <!-- ============================= SIDEBAR ============================= -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="assets/images/logo.svg" alt="Borcelle logo">
+                <div class="sidebar-logo-text">
+                    Borcelle
+                    <span>Digital Wallet</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <!-- Each item uses data-page so navigation.js knows where to send the user -->
+                    <li class="sidebar-nav-item active" data-page="dashboard.html">
+                        <span class="icon">&#9638;</span>
+                        <span class="label">Dashboard</span>
+                    </li>
+                    <li class="sidebar-nav-item" data-page="dashboard.html">
+                        <span class="icon">&#128179;</span>
+                        <span class="label">Payment</span>
+                    </li>
+                    <li class="sidebar-nav-item" data-page="dashboard.html">
+                        <span class="icon">&#8646;</span>
+                        <span class="label">Transaction</span>
+                    </li>
+                    <li class="sidebar-nav-item" data-page="dashboard.html">
+                        <span class="icon">&#128196;</span>
+                        <span class="label">Bill &amp; Tax</span>
+                    </li>
+                    <li class="sidebar-nav-item" data-page="dashboard.html">
+                        <span class="icon">&#128276;</span>
+                        <span class="label">Notifications</span>
+                    </li>
+                </ul>
+
+                <div class="sidebar-divider"></div>
+
+                <ul>
+                    <li class="sidebar-nav-item" data-page="dashboard.html">
+                        <span class="icon">&#128100;</span>
+                        <span class="label">Account</span>
+                    </li>
+                    <li class="sidebar-nav-item" data-page="dashboard.html">
+                        <span class="icon">&#128181;</span>
+                        <span class="label">My Card</span>
+                    </li>
+                    <li class="sidebar-nav-item" data-page="dashboard.html">
+                        <span class="icon">&#9881;</span>
+                        <span class="label">Settings</span>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="sidebar-divider"></div>
+                <ul>
+                    <li class="sidebar-nav-item">
+                        <span class="icon">&#128222;</span>
+                        <span class="label">Call Center</span>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <span class="icon">&#10067;</span>
+                        <span class="label">Help</span>
+                    </li>
+                    <li class="sidebar-nav-item" data-action="logout">
+                        <span class="icon">&#8674;</span>
+                        <span class="label">Log Out</span>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- ============================== TOPBAR ============================== -->
+        <header class="topbar">
+            <div class="topbar-welcome">
+                <h1>Welcome back, <span class="js-user-first-name">Olivia Wilson</span></h1>
+                <p>Let's take a detailed look at your financial situation today</p>
+            </div>
+
+            <div class="topbar-search">
+                <input type="text" placeholder="Search here">
+                <button type="button" aria-label="Search">&#128269;</button>
+            </div>
+
+            <div class="topbar-user">
+                <div>
+                    <div class="topbar-user-name js-topbar-username">Olivia Wilson</div>
+                    <div class="topbar-user-role js-topbar-role">Silver Member</div>
+                </div>
+                <img src="assets/images/avatar.svg" alt="User avatar">
+            </div>
+        </header>
+
+        <!-- ============================ MAIN CONTENT ============================ -->
+        <main class="main-content">
+
+            <!-- ---- Left column: balance + card info ---- -->
+            <div class="balance-panel">
+
+                <section class="card">
+                    <div class="card-header">
+                        <h2>My Account &amp; Balance</h2>
+                        <span class="card-menu-dots">&#8942;</span>
+                    </div>
+
+                    <div class="balance-card">
+                        <div class="balance-card-top">
+                            <span class="balance-label">Total Balance</span>
+                            <span class="balance-icon">&#128176;</span>
+                        </div>
+                        <div class="balance-amount js-balance-amount">$ 0<small>,00</small></div>
+                        <div class="balance-meta">
+                            <span>&#9733;&#9733;&#9733;&#9733; <span class="js-balance-card-number">----</span></span>
+                            <span class="js-balance-expiry">--</span>
+                        </div>
+                    </div>
+
+                    <div style="height: 16px"></div>
+
+                    <div class="cardinfo-card">
+                        <div class="cardinfo-top">
+                            <h2 style="font-size:14px;">Card Info</h2>
+                            <span class="badge-priority">&#128081; Priority Customer</span>
+                        </div>
+
+                        <div class="cardinfo-name js-card-holder-name">Loading...</div>
+                        <div class="cardinfo-number js-card-number">----</div>
+
+                        <div class="cardinfo-chip-row">
+                            <div class="chip"></div>
+                        </div>
+
+                        <div class="cardinfo-status-row">
+                            <span class="status-activated js-card-status">Activated</span>
+                            <span class="js-card-tier">Borcelle Card</span>
+                        </div>
+                    </div>
+
+                    <div style="height: 16px"></div>
+
+                    <div class="action-btn-row">
+                        <button class="btn btn-outline btn-block" id="historyBtn">&#128337; History</button>
+                        <button class="btn btn-primary btn-block" id="topUpBtn">&#10133; Top-up</button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- ---- Right column: transactions ---- -->
+            <div>
+                <section class="card">
+                    <div class="card-header">
+                        <h2>Transaction</h2>
+                        <div class="transaction-toolbar">
+                            <span style="font-size:13px; color: var(--color-text-muted);">Sort by</span>
+                            <select class="sort-select">
+                                <option>Recently</option>
+                                <option>Oldest</option>
+                                <option>Highest amount</option>
+                            </select>
+                            <button class="btn btn-outline">&#128424; Print</button>
+                            <button class="btn btn-primary">&#128257; Share</button>
+                        </div>
+                    </div>
+
+                    <table class="transaction-table">
+                        <thead>
+                            <tr>
+                                <th>Purpose</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Result</th>
+                            </tr>
+                        </thead>
+                        <tbody class="js-transaction-table-body">
+                            <!-- Rows are inserted here by dashboard.js -->
+                            <tr>
+                                <td colspan="4" style="text-align:center; color: var(--color-text-muted); padding: 24px;">
+                                    Loading transactions...
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <span class="show-all-link">Show All My Transactions &#8964;</span>
+                </section>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Scripts: navigation.js and api.js are shared across pages, dashboard.js is page-specific -->
+    <script src="js/api.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
